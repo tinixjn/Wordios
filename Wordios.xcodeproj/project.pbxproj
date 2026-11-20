@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C136467C30B0F98F000BD587 /* StudyOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */; };
-		C136467D30B0F98F000BD587 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467230B0F98F000BD587 /* ModuleBuilder.swift */; };
-		C136467E30B0F98F000BD587 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467430B0F98F000BD587 /* DemoData.swift */; };
-		C136467F30B0F98F000BD587 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467530B0F98F000BD587 /* Models.swift */; };
-		C136468030B0F98F000BD587 /* WordModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467630B0F98F000BD587 /* WordModule.swift */; };
-		C136468130B0F98F000BD587 /* FlashcardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467830B0F98F000BD587 /* FlashcardCardView.swift */; };
-		C136468230B0F98F000BD587 /* FlashcardSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467930B0F98F000BD587 /* FlashcardSessionView.swift */; };
-		C136468330B0F98F000BD587 /* DictionaryRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */; };
+		C11EA8C430B1029F00279BE2 /* FlashcardSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8B230B1029E00279BE2 /* FlashcardSessionViewModel.swift */; };
+		C11EA8C530B1029F00279BE2 /* ModulesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8B330B1029E00279BE2 /* ModulesListViewModel.swift */; };
+		C11EA8C630B1029F00279BE2 /* StudyOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8B530B1029E00279BE2 /* StudyOrderStrategy.swift */; };
+		C11EA8C730B1029F00279BE2 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8B630B1029E00279BE2 /* ModuleBuilder.swift */; };
+		C11EA8C830B1029F00279BE2 /* DictionaryWordAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8B730B1029E00279BE2 /* DictionaryWordAdapter.swift */; };
+		C11EA8C930B1029F00279BE2 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8B930B1029F00279BE2 /* DemoData.swift */; };
+		C11EA8CA30B1029F00279BE2 /* DictionaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8BA30B1029F00279BE2 /* DictionaryDTO.swift */; };
+		C11EA8CB30B1029F00279BE2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8BB30B1029F00279BE2 /* Models.swift */; };
+		C11EA8CC30B1029F00279BE2 /* WordModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8BC30B1029F00279BE2 /* WordModule.swift */; };
+		C11EA8CD30B1029F00279BE2 /* FlashcardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8BE30B1029F00279BE2 /* FlashcardCardView.swift */; };
+		C11EA8CE30B1029F00279BE2 /* FlashcardSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8BF30B1029F00279BE2 /* FlashcardSessionView.swift */; };
+		C11EA8CF30B1029F00279BE2 /* DictionaryAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8C130B1029F00279BE2 /* DictionaryAPIService.swift */; };
+		C11EA8D030B1029F00279BE2 /* DictionaryRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8C230B1029F00279BE2 /* DictionaryRepositoryProtocol.swift */; };
+		C11EA8D130B1029F00279BE2 /* MockDictionaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EA8C330B1029F00279BE2 /* MockDictionaryRepository.swift */; };
 		C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B7F30B0D32900C2B826 /* WordiosApp.swift */; };
 		C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B8130B0D32900C2B826 /* ContentView.swift */; };
 		C1958B8430B0D32E00C2B826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1958B8330B0D32E00C2B826 /* Assets.xcassets */; };
@@ -42,14 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyOrderStrategy.swift; sourceTree = "<group>"; };
-		C136467230B0F98F000BD587 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
-		C136467430B0F98F000BD587 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
-		C136467530B0F98F000BD587 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		C136467630B0F98F000BD587 /* WordModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordModule.swift; sourceTree = "<group>"; };
-		C136467830B0F98F000BD587 /* FlashcardCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardCardView.swift; sourceTree = "<group>"; };
-		C136467930B0F98F000BD587 /* FlashcardSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSessionView.swift; sourceTree = "<group>"; };
-		C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C11EA8B230B1029E00279BE2 /* FlashcardSessionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSessionViewModel.swift; sourceTree = "<group>"; };
+		C11EA8B330B1029E00279BE2 /* ModulesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesListViewModel.swift; sourceTree = "<group>"; };
+		C11EA8B530B1029E00279BE2 /* StudyOrderStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyOrderStrategy.swift; sourceTree = "<group>"; };
+		C11EA8B630B1029E00279BE2 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		C11EA8B730B1029E00279BE2 /* DictionaryWordAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryWordAdapter.swift; sourceTree = "<group>"; };
+		C11EA8B930B1029F00279BE2 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		C11EA8BA30B1029F00279BE2 /* DictionaryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDTO.swift; sourceTree = "<group>"; };
+		C11EA8BB30B1029F00279BE2 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C11EA8BC30B1029F00279BE2 /* WordModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordModule.swift; sourceTree = "<group>"; };
+		C11EA8BE30B1029F00279BE2 /* FlashcardCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardCardView.swift; sourceTree = "<group>"; };
+		C11EA8BF30B1029F00279BE2 /* FlashcardSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSessionView.swift; sourceTree = "<group>"; };
+		C11EA8C130B1029F00279BE2 /* DictionaryAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryAPIService.swift; sourceTree = "<group>"; };
+		C11EA8C230B1029F00279BE2 /* DictionaryRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C11EA8C330B1029F00279BE2 /* MockDictionaryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDictionaryRepository.swift; sourceTree = "<group>"; };
 		C1958B7C30B0D32900C2B826 /* Wordios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1958B7F30B0D32900C2B826 /* WordiosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosApp.swift; sourceTree = "<group>"; };
 		C1958B8130B0D32900C2B826 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,49 +99,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C136466F30B0F98F000BD587 /* Sources */ = {
+		C11EA8B030B1029E00279BE2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C136467030B0F98F000BD587 /* Patterns */,
-				C136467330B0F98F000BD587 /* Models */,
-				C136467730B0F98F000BD587 /* Views */,
-				C136467A30B0F98F000BD587 /* Services */,
+				C11EA8B130B1029E00279BE2 /* ViewModels */,
+				C11EA8B430B1029E00279BE2 /* Patterns */,
+				C11EA8B830B1029F00279BE2 /* Models */,
+				C11EA8BD30B1029F00279BE2 /* Views */,
+				C11EA8C030B1029F00279BE2 /* Services */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		C136467030B0F98F000BD587 /* Patterns */ = {
+		C11EA8B130B1029E00279BE2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */,
-				C136467230B0F98F000BD587 /* ModuleBuilder.swift */,
+				C11EA8B230B1029E00279BE2 /* FlashcardSessionViewModel.swift */,
+				C11EA8B330B1029E00279BE2 /* ModulesListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C11EA8B430B1029E00279BE2 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				C11EA8B530B1029E00279BE2 /* StudyOrderStrategy.swift */,
+				C11EA8B630B1029E00279BE2 /* ModuleBuilder.swift */,
+				C11EA8B730B1029E00279BE2 /* DictionaryWordAdapter.swift */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
 		};
-		C136467330B0F98F000BD587 /* Models */ = {
+		C11EA8B830B1029F00279BE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C136467430B0F98F000BD587 /* DemoData.swift */,
-				C136467530B0F98F000BD587 /* Models.swift */,
-				C136467630B0F98F000BD587 /* WordModule.swift */,
+				C11EA8B930B1029F00279BE2 /* DemoData.swift */,
+				C11EA8BA30B1029F00279BE2 /* DictionaryDTO.swift */,
+				C11EA8BB30B1029F00279BE2 /* Models.swift */,
+				C11EA8BC30B1029F00279BE2 /* WordModule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C136467730B0F98F000BD587 /* Views */ = {
+		C11EA8BD30B1029F00279BE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C136467830B0F98F000BD587 /* FlashcardCardView.swift */,
-				C136467930B0F98F000BD587 /* FlashcardSessionView.swift */,
+				C11EA8BE30B1029F00279BE2 /* FlashcardCardView.swift */,
+				C11EA8BF30B1029F00279BE2 /* FlashcardSessionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C136467A30B0F98F000BD587 /* Services */ = {
+		C11EA8C030B1029F00279BE2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */,
+				C11EA8C130B1029F00279BE2 /* DictionaryAPIService.swift */,
+				C11EA8C230B1029F00279BE2 /* DictionaryRepositoryProtocol.swift */,
+				C11EA8C330B1029F00279BE2 /* MockDictionaryRepository.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -137,7 +163,7 @@
 		C1958B7330B0D32900C2B826 = {
 			isa = PBXGroup;
 			children = (
-				C136466F30B0F98F000BD587 /* Sources */,
+				C11EA8B030B1029E00279BE2 /* Sources */,
 				C1958B7E30B0D32900C2B826 /* Wordios */,
 				C1958B8F30B0D32F00C2B826 /* WordiosTests */,
 				C1958B9930B0D32F00C2B826 /* WordiosUITests */,
@@ -321,16 +347,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C136467C30B0F98F000BD587 /* StudyOrderStrategy.swift in Sources */,
+				C11EA8C930B1029F00279BE2 /* DemoData.swift in Sources */,
+				C11EA8CA30B1029F00279BE2 /* DictionaryDTO.swift in Sources */,
 				C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */,
 				C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */,
-				C136468030B0F98F000BD587 /* WordModule.swift in Sources */,
-				C136467F30B0F98F000BD587 /* Models.swift in Sources */,
-				C136468230B0F98F000BD587 /* FlashcardSessionView.swift in Sources */,
-				C136467D30B0F98F000BD587 /* ModuleBuilder.swift in Sources */,
-				C136467E30B0F98F000BD587 /* DemoData.swift in Sources */,
-				C136468130B0F98F000BD587 /* FlashcardCardView.swift in Sources */,
-				C136468330B0F98F000BD587 /* DictionaryRepositoryProtocol.swift in Sources */,
+				C11EA8D030B1029F00279BE2 /* DictionaryRepositoryProtocol.swift in Sources */,
+				C11EA8C530B1029F00279BE2 /* ModulesListViewModel.swift in Sources */,
+				C11EA8C430B1029F00279BE2 /* FlashcardSessionViewModel.swift in Sources */,
+				C11EA8CF30B1029F00279BE2 /* DictionaryAPIService.swift in Sources */,
+				C11EA8CE30B1029F00279BE2 /* FlashcardSessionView.swift in Sources */,
+				C11EA8D130B1029F00279BE2 /* MockDictionaryRepository.swift in Sources */,
+				C11EA8C830B1029F00279BE2 /* DictionaryWordAdapter.swift in Sources */,
+				C11EA8CD30B1029F00279BE2 /* FlashcardCardView.swift in Sources */,
+				C11EA8C630B1029F00279BE2 /* StudyOrderStrategy.swift in Sources */,
+				C11EA8C730B1029F00279BE2 /* ModuleBuilder.swift in Sources */,
+				C11EA8CC30B1029F00279BE2 /* WordModule.swift in Sources */,
+				C11EA8CB30B1029F00279BE2 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
