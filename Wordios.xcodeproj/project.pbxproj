@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B7F30B0D32900C2B826 /* WordiosApp.swift */; };
+		C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B8130B0D32900C2B826 /* ContentView.swift */; };
+		C1958B8430B0D32E00C2B826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1958B8330B0D32E00C2B826 /* Assets.xcassets */; };
+		C1958B8730B0D32E00C2B826 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1958B8630B0D32E00C2B826 /* Preview Assets.xcassets */; };
+		C1958B9130B0D32F00C2B826 /* WordiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9030B0D32F00C2B826 /* WordiosTests.swift */; };
+		C1958B9B30B0D32F00C2B826 /* WordiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */; };
+		C1958B9D30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1958B8D30B0D32F00C2B826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1958B7430B0D32900C2B826 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1958B7B30B0D32900C2B826;
+			remoteInfo = Wordios;
+		};
+		C1958B9730B0D32F00C2B826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1958B7430B0D32900C2B826 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1958B7B30B0D32900C2B826;
+			remoteInfo = Wordios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1958B7C30B0D32900C2B826 /* Wordios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1958B7F30B0D32900C2B826 /* WordiosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosApp.swift; sourceTree = "<group>"; };
+		C1958B8130B0D32900C2B826 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1958B8330B0D32E00C2B826 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1958B8630B0D32E00C2B826 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1958B8C30B0D32F00C2B826 /* WordiosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordiosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1958B9030B0D32F00C2B826 /* WordiosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosTests.swift; sourceTree = "<group>"; };
+		C1958B9630B0D32F00C2B826 /* WordiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosUITests.swift; sourceTree = "<group>"; };
+		C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1958B7930B0D32900C2B826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1958B8930B0D32F00C2B826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1958B9330B0D32F00C2B826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1958B7330B0D32900C2B826 = {
+			isa = PBXGroup;
+			children = (
+				C1958B7E30B0D32900C2B826 /* Wordios */,
+				C1958B8F30B0D32F00C2B826 /* WordiosTests */,
+				C1958B9930B0D32F00C2B826 /* WordiosUITests */,
+				C1958B7D30B0D32900C2B826 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1958B7D30B0D32900C2B826 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1958B7C30B0D32900C2B826 /* Wordios.app */,
+				C1958B8C30B0D32F00C2B826 /* WordiosTests.xctest */,
+				C1958B9630B0D32F00C2B826 /* WordiosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1958B7E30B0D32900C2B826 /* Wordios */ = {
+			isa = PBXGroup;
+			children = (
+				C1958B7F30B0D32900C2B826 /* WordiosApp.swift */,
+				C1958B8130B0D32900C2B826 /* ContentView.swift */,
+				C1958B8330B0D32E00C2B826 /* Assets.xcassets */,
+				C1958B8530B0D32E00C2B826 /* Preview Content */,
+			);
+			path = Wordios;
+			sourceTree = "<group>";
+		};
+		C1958B8530B0D32E00C2B826 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C1958B8630B0D32E00C2B826 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1958B8F30B0D32F00C2B826 /* WordiosTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1958B9030B0D32F00C2B826 /* WordiosTests.swift */,
+			);
+			path = WordiosTests;
+			sourceTree = "<group>";
+		};
+		C1958B9930B0D32F00C2B826 /* WordiosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */,
+				C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */,
+			);
+			path = WordiosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1958B7B30B0D32900C2B826 /* Wordios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1958BA030B0D32F00C2B826 /* Build configuration list for PBXNativeTarget "Wordios" */;
+			buildPhases = (
+				C1958B7830B0D32900C2B826 /* Sources */,
+				C1958B7930B0D32900C2B826 /* Frameworks */,
+				C1958B7A30B0D32900C2B826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wordios;
+			productName = Wordios;
+			productReference = C1958B7C30B0D32900C2B826 /* Wordios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1958B8B30B0D32F00C2B826 /* WordiosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1958BA330B0D32F00C2B826 /* Build configuration list for PBXNativeTarget "WordiosTests" */;
+			buildPhases = (
+				C1958B8830B0D32F00C2B826 /* Sources */,
+				C1958B8930B0D32F00C2B826 /* Frameworks */,
+				C1958B8A30B0D32F00C2B826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1958B8E30B0D32F00C2B826 /* PBXTargetDependency */,
+			);
+			name = WordiosTests;
+			productName = WordiosTests;
+			productReference = C1958B8C30B0D32F00C2B826 /* WordiosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1958B9530B0D32F00C2B826 /* WordiosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1958BA630B0D32F00C2B826 /* Build configuration list for PBXNativeTarget "WordiosUITests" */;
+			buildPhases = (
+				C1958B9230B0D32F00C2B826 /* Sources */,
+				C1958B9330B0D32F00C2B826 /* Frameworks */,
+				C1958B9430B0D32F00C2B826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1958B9830B0D32F00C2B826 /* PBXTargetDependency */,
+			);
+			name = WordiosUITests;
+			productName = WordiosUITests;
+			productReference = C1958B9630B0D32F00C2B826 /* WordiosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1958B7430B0D32900C2B826 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					C1958B7B30B0D32900C2B826 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					C1958B8B30B0D32F00C2B826 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C1958B7B30B0D32900C2B826;
+					};
+					C1958B9530B0D32F00C2B826 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C1958B7B30B0D32900C2B826;
+					};
+				};
+			};
+			buildConfigurationList = C1958B7730B0D32900C2B826 /* Build configuration list for PBXProject "Wordios" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1958B7330B0D32900C2B826;
+			productRefGroup = C1958B7D30B0D32900C2B826 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1958B7B30B0D32900C2B826 /* Wordios */,
+				C1958B8B30B0D32F00C2B826 /* WordiosTests */,
+				C1958B9530B0D32F00C2B826 /* WordiosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1958B7A30B0D32900C2B826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1958B8730B0D32E00C2B826 /* Preview Assets.xcassets in Resources */,
+				C1958B8430B0D32E00C2B826 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1958B8A30B0D32F00C2B826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1958B9430B0D32F00C2B826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1958B7830B0D32900C2B826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */,
+				C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1958B8830B0D32F00C2B826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1958B9130B0D32F00C2B826 /* WordiosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1958B9230B0D32F00C2B826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1958B9D30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift in Sources */,
+				C1958B9B30B0D32F00C2B826 /* WordiosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1958B8E30B0D32F00C2B826 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1958B7B30B0D32900C2B826 /* Wordios */;
+			targetProxy = C1958B8D30B0D32F00C2B826 /* PBXContainerItemProxy */;
+		};
+		C1958B9830B0D32F00C2B826 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1958B7B30B0D32900C2B826 /* Wordios */;
+			targetProxy = C1958B9730B0D32F00C2B826 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C1958B9E30B0D32F00C2B826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1958B9F30B0D32F00C2B826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1958BA130B0D32F00C2B826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wordios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordios.Wordios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1958BA230B0D32F00C2B826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wordios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordios.Wordios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C1958BA430B0D32F00C2B826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordios.WordiosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordios.app/Wordios";
+			};
+			name = Debug;
+		};
+		C1958BA530B0D32F00C2B826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordios.WordiosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordios.app/Wordios";
+			};
+			name = Release;
+		};
+		C1958BA730B0D32F00C2B826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordios.WordiosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wordios;
+			};
+			name = Debug;
+		};
+		C1958BA830B0D32F00C2B826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordios.WordiosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wordios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1958B7730B0D32900C2B826 /* Build configuration list for PBXProject "Wordios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1958B9E30B0D32F00C2B826 /* Debug */,
+				C1958B9F30B0D32F00C2B826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1958BA030B0D32F00C2B826 /* Build configuration list for PBXNativeTarget "Wordios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1958BA130B0D32F00C2B826 /* Debug */,
+				C1958BA230B0D32F00C2B826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1958BA330B0D32F00C2B826 /* Build configuration list for PBXNativeTarget "WordiosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1958BA430B0D32F00C2B826 /* Debug */,
+				C1958BA530B0D32F00C2B826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1958BA630B0D32F00C2B826 /* Build configuration list for PBXNativeTarget "WordiosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1958BA730B0D32F00C2B826 /* Debug */,
+				C1958BA830B0D32F00C2B826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1958B7430B0D32900C2B826 /* Project object */;
+}
