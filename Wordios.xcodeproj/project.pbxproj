@@ -14,6 +14,7 @@
 		C1958B9130B0D32F00C2B826 /* WordiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9030B0D32F00C2B826 /* WordiosTests.swift */; };
 		C1958B9B30B0D32F00C2B826 /* WordiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */; };
 		C1958B9D30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */; };
+		C1FDF8B630B0E4BB0027650F /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = C1FDF8B530B0E4BB0027650F /* Sources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C1958B9630B0D32F00C2B826 /* WordiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosUITests.swift; sourceTree = "<group>"; };
 		C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C1FDF8B530B0E4BB0027650F /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		C1958B7330B0D32900C2B826 = {
 			isa = PBXGroup;
 			children = (
+				C1FDF8B530B0E4BB0027650F /* Sources */,
 				C1958B7E30B0D32900C2B826 /* Wordios */,
 				C1958B8F30B0D32F00C2B826 /* WordiosTests */,
 				C1958B9930B0D32F00C2B826 /* WordiosUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FDF8B630B0E4BB0027650F /* Sources in Resources */,
 				C1958B8730B0D32E00C2B826 /* Preview Assets.xcassets in Resources */,
 				C1958B8430B0D32E00C2B826 /* Assets.xcassets in Resources */,
 			);
