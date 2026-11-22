@@ -1,11 +1,10 @@
 import SwiftUI
 
-@MainActor
 final class FlashcardSessionViewModel: ObservableObject {
     @Published private(set) var cards: [WordCard]
     @Published private(set) var currentIndex: Int = 0
     @Published var isSessionCompleted: Bool = false
-    
+
     init(cards: [WordCard] = FlashcardSessionViewModel.sampleCards) {
         self.cards = cards
     }
