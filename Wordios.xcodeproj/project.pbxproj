@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C136467C30B0F98F000BD587 /* StudyOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */; };
+		C136467D30B0F98F000BD587 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467230B0F98F000BD587 /* ModuleBuilder.swift */; };
+		C136467E30B0F98F000BD587 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467430B0F98F000BD587 /* DemoData.swift */; };
+		C136467F30B0F98F000BD587 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467530B0F98F000BD587 /* Models.swift */; };
+		C136468030B0F98F000BD587 /* WordModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467630B0F98F000BD587 /* WordModule.swift */; };
+		C136468130B0F98F000BD587 /* FlashcardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467830B0F98F000BD587 /* FlashcardCardView.swift */; };
+		C136468230B0F98F000BD587 /* FlashcardSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467930B0F98F000BD587 /* FlashcardSessionView.swift */; };
+		C136468330B0F98F000BD587 /* DictionaryRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */; };
 		C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B7F30B0D32900C2B826 /* WordiosApp.swift */; };
 		C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B8130B0D32900C2B826 /* ContentView.swift */; };
 		C1958B8430B0D32E00C2B826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1958B8330B0D32E00C2B826 /* Assets.xcassets */; };
@@ -34,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyOrderStrategy.swift; sourceTree = "<group>"; };
+		C136467230B0F98F000BD587 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		C136467430B0F98F000BD587 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		C136467530B0F98F000BD587 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C136467630B0F98F000BD587 /* WordModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordModule.swift; sourceTree = "<group>"; };
+		C136467830B0F98F000BD587 /* FlashcardCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardCardView.swift; sourceTree = "<group>"; };
+		C136467930B0F98F000BD587 /* FlashcardSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSessionView.swift; sourceTree = "<group>"; };
+		C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryRepositoryProtocol.swift; sourceTree = "<group>"; };
 		C1958B7C30B0D32900C2B826 /* Wordios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1958B7F30B0D32900C2B826 /* WordiosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosApp.swift; sourceTree = "<group>"; };
 		C1958B8130B0D32900C2B826 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,9 +87,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C136466F30B0F98F000BD587 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C136467030B0F98F000BD587 /* Patterns */,
+				C136467330B0F98F000BD587 /* Models */,
+				C136467730B0F98F000BD587 /* Views */,
+				C136467A30B0F98F000BD587 /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C136467030B0F98F000BD587 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */,
+				C136467230B0F98F000BD587 /* ModuleBuilder.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		C136467330B0F98F000BD587 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C136467430B0F98F000BD587 /* DemoData.swift */,
+				C136467530B0F98F000BD587 /* Models.swift */,
+				C136467630B0F98F000BD587 /* WordModule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C136467730B0F98F000BD587 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C136467830B0F98F000BD587 /* FlashcardCardView.swift */,
+				C136467930B0F98F000BD587 /* FlashcardSessionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C136467A30B0F98F000BD587 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C1958B7330B0D32900C2B826 = {
 			isa = PBXGroup;
 			children = (
+				C136466F30B0F98F000BD587 /* Sources */,
 				C1958B7E30B0D32900C2B826 /* Wordios */,
 				C1958B8F30B0D32F00C2B826 /* WordiosTests */,
 				C1958B9930B0D32F00C2B826 /* WordiosUITests */,
@@ -257,8 +321,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C136467C30B0F98F000BD587 /* StudyOrderStrategy.swift in Sources */,
 				C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */,
 				C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */,
+				C136468030B0F98F000BD587 /* WordModule.swift in Sources */,
+				C136467F30B0F98F000BD587 /* Models.swift in Sources */,
+				C136468230B0F98F000BD587 /* FlashcardSessionView.swift in Sources */,
+				C136467D30B0F98F000BD587 /* ModuleBuilder.swift in Sources */,
+				C136467E30B0F98F000BD587 /* DemoData.swift in Sources */,
+				C136468130B0F98F000BD587 /* FlashcardCardView.swift in Sources */,
+				C136468330B0F98F000BD587 /* DictionaryRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
