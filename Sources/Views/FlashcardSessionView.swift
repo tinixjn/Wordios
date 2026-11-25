@@ -1,106 +1,13 @@
 import SwiftUI
 
-final class FlashcardSessionViewModel: ObservableObject {
-    @Published private(set) var cards: [WordCard]
-    @Published private(set) var currentIndex: Int = 0
-    @Published var isSessionCompleted: Bool = false
-
-    init(cards: [WordCard] = FlashcardSessionViewModel.sampleCards) {
-        self.cards = cards
-    }
-    
-    var currentCard: WordCard? {
-        guard currentIndex < cards.count else { return nil }
-        return cards[currentIndex]
-    }
-    
-    var progressText: String {
-        guard !cards.isEmpty else { return "0 з 0" }
-        let displayIndex = min(currentIndex + 1, cards.count)
-        return "\(displayIndex) з \(cards.count)"
-    }
-    
-    var progressValue: Double {
-        guard !cards.isEmpty else { return 0 }
-        return Double(currentIndex) / Double(cards.count)
-    }
-    
-    func markAsLearning() {
-        updateCurrentCardStatus(to: .learning)
-        advanceToNextCard()
-    }
-    
-    func markAsMastered() {
-        updateCurrentCardStatus(to: .mastered)
-        advanceToNextCard()
-    }
-    
-    func restartSession() {
-        currentIndex = 0
-        isSessionCompleted = false
-    }
-    
-    private func updateCurrentCardStatus(to newStatus: LearningStatus) {
-        guard currentIndex < cards.count else { return }
-        cards[currentIndex].updateStatus(to: newStatus)
-    }
-    
-    private func advanceToNextCard() {
-        if currentIndex + 1 < cards.count {
-            currentIndex += 1
-        } else {
-            isSessionCompleted = true
-        }
-    }
-    
-    static var sampleCards: [WordCard] {
-        [
-            WordCard(
-                term: "Itinerary",
-                translation: "Маршрут подорожі",
-                transcription: "/aɪˈtɪn.ə.rer.i/",
-                synonyms: [
-                    "Route — загальний напрямок руху",
-                    "Schedule — розклад поїздки за часом",
-                    "Travel plan — детальний план подорожі"
-                ],
-                status: .new
-            ),
-            WordCard(
-                term: "Departure",
-                translation: "Відправлення, виліт",
-                transcription: "/dɪˈpɑːr.tʃər/",
-                synonyms: [
-                    "Takeoff — момент зльоту літака",
-                    "Leaving — виїзд із місця перебування"
-                ],
-                status: .learning
-            ),
-            WordCard(
-                term: "Accommodation",
-                translation: "Житло, розміщення",
-                transcription: "/əˌkɑː.məˈdeɪ.ʃən/",
-                synonyms: [
-                    "Lodging — тимчасове житло на час поїздки",
-                    "Housing — загальне поняття житла"
-                ],
-                status: .new
-            )
-        ]
-    }
-}
-
 struct FlashcardSessionView: View {
-    @StateObject private var viewModel: FlashcardSessionViewModel
+    @ObservedObject var viewModel: FlashcardSessionViewModel
     @State private var isCardFlipped: Bool = false
-    
-    init(viewModel: FlashcardSessionViewModel = FlashcardSessionViewModel()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @State private var isSessionCompleted: Bool = false
     
     var body: some View {
         VStack(spacing: 20) {
-            if viewModel.isSessionCompleted {
+            if isSessionCompleted {
                 completedView
             } else if let card = viewModel.currentCard {
                 progressHeader
@@ -127,7 +34,7 @@ struct FlashcardSessionView: View {
         .padding(.horizontal, 20)
         .padding(.vertical, 16)
         .background(Color(.systemGroupedBackground).ignoresSafeArea())
-        .navigationTitle("Тренування")
+        .navigationTitle(viewModel.module?.title ?? "Тренування")
         .navigationBarTitleDisplayMode(.inline)
     }
     
@@ -138,22 +45,23 @@ struct FlashcardSessionView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 Spacer()
-                Text(viewModel.progressText)
+                Text("\(viewModel.currentPosition) з \(viewModel.totalCount)")
                     .font(.subheadline.weight(.bold))
                     .foregroundColor(.primary)
             }
             
-            ProgressView(value: viewModel.progressValue)
-                .tint(.accentColor)
+            ProgressView(
+                value: Double(max(viewModel.currentPosition - 1, 0)),
+                total: Double(max(viewModel.totalCount, 1))
+            )
+            .tint(.accentColor)
         }
     }
     
     private var actionButtons: some View {
         HStack(spacing: 14) {
             Button {
-                handleCardAction {
-                    viewModel.markAsLearning()
-                }
+                handleCardAction(status: .learning)
             } label: {
                 HStack(spacing: 6) {
                     Image(systemName: "arrow.counterclockwise")
@@ -170,9 +78,7 @@ struct FlashcardSessionView: View {
             }
             
             Button {
-                handleCardAction {
-                    viewModel.markAsMastered()
-                }
+                handleCardAction(status: .mastered)
             } label: {
                 HStack(spacing: 6) {
                     Image(systemName: "checkmark.circle.fill")
@@ -202,43 +108,40 @@ struct FlashcardSessionView: View {
                 .font(.title2.bold())
                 .multilineTextAlignment(.center)
             
-            Text("Ви повторили всі \(viewModel.cards.count) карток у цьому модулі.")
+            Text("Ви повторили всі \(viewModel.totalCount) карток у цьому модулі.")
                 .font(.body)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
-            
-            Button {
-                withAnimation {
-                    isCardFlipped = false
-                    viewModel.restartSession()
-                }
-            } label: {
-                Text("Пройти ще раз")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 15)
-                    .background(Color.accentColor)
-                    .foregroundColor(.white)
-                    .cornerRadius(16)
-            }
-            .padding(.top, 8)
             
             Spacer()
         }
     }
     
-    private func handleCardAction(_ action: @escaping () -> Void) {
+    private func handleCardAction(status: LearningStatus) {
         withAnimation(.easeInOut(duration: 0.35)) {
             isCardFlipped = false
-            action()
+            viewModel.markCurrentCard(as: status)
+            if viewModel.canAdvance {
+                viewModel.advance()
+            } else {
+                isSessionCompleted = true
+            }
         }
     }
 }
 
 struct FlashcardSessionView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            FlashcardSessionView()
+        let repository = MockDictionaryRepository()
+        let moduleId = repository.fetchModules().first?.id ?? UUID()
+        let viewModel = FlashcardSessionViewModel(
+            moduleId: moduleId,
+            repository: repository,
+            strategy: SequentialStrategy()
+        )
+        
+        return NavigationView {
+            FlashcardSessionView(viewModel: viewModel)
         }
     }
 }
