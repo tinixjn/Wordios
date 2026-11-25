@@ -1,7 +1,6 @@
 import SwiftUI
 
 /// Форма додавання слова: валідація, перетворення через Adapter і callback збереження.
-@MainActor
 struct AddWordSheetView: View {
     let module: WordModule
     let onSave: (WordCard) -> Void
@@ -36,8 +35,8 @@ struct AddWordSheetView: View {
                             .font(.subheadline.weight(.semibold))
                         TextField("Наприклад, Journey", text: $term)
                             .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled(true)
-                            .textFieldStyle(.roundedBorder)
+                            .disableAutocorrection(true)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             .focused($focusedField, equals: .term)
                             .submitLabel(.next)
                             .onSubmit { focusedField = .translation }
@@ -47,7 +46,7 @@ struct AddWordSheetView: View {
                         Text("Переклад *")
                             .font(.subheadline.weight(.semibold))
                         TextField("Наприклад, Подорож", text: $translation)
-                            .textFieldStyle(.roundedBorder)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             .focused($focusedField, equals: .translation)
                             .submitLabel(.next)
                             .onSubmit { focusedField = .transcription }
@@ -57,7 +56,7 @@ struct AddWordSheetView: View {
                         Text("Транскрипція (необов'язково)")
                             .font(.subheadline.weight(.semibold))
                         TextField("/ˈdʒɜːrni/", text: $transcription)
-                            .textFieldStyle(.roundedBorder)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             .focused($focusedField, equals: .transcription)
                             .submitLabel(.next)
                             .onSubmit { focusedField = .synonyms }
@@ -67,8 +66,10 @@ struct AddWordSheetView: View {
                         Text("Синоніми (необов'язково)")
                             .font(.subheadline.weight(.semibold))
                         TextField("trip, voyage; travel", text: $synonyms)
-                            .textFieldStyle(.roundedBorder)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             .focused($focusedField, equals: .synonyms)
+                            .submitLabel(.done)
+                            .onSubmit { focusedField = nil }
                         Text("Відокремлюйте синоніми комою або крапкою з комою.")
                             .font(.caption)
                             .foregroundColor(.secondary)
@@ -79,6 +80,17 @@ struct AddWordSheetView: View {
                             .font(.subheadline)
                             .foregroundColor(.red)
                     }
+
+                    // Кнопка є частиною форми, тому не висить над клавіатурою.
+                    Button(action: { save() }) {
+                        Text("Зберегти слово")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(!isValid)
+                    .padding(.top, 8)
                 }
                 .padding(20)
             }
@@ -92,19 +104,6 @@ struct AddWordSheetView: View {
                     Spacer()
                     Button("Готово") { focusedField = nil }
                 }
-            }
-            .safeAreaInset(edge: .bottom) {
-                Button(action: save) {
-                    Text("Зберегти слово")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(!isValid)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(.ultraThinMaterial)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
