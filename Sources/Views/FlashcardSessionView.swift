@@ -1,101 +1,15 @@
 import SwiftUI
 
-final class FlashcardSessionViewModel: ObservableObject {
-    @Published private(set) var cards: [WordCard]
-    @Published private(set) var currentIndex: Int = 0
-    @Published var isSessionCompleted: Bool = false
-
-    init(cards: [WordCard] = FlashcardSessionViewModel.sampleCards) {
-        self.cards = cards
-    }
-    
-    var currentCard: WordCard? {
-        guard currentIndex < cards.count else { return nil }
-        return cards[currentIndex]
-    }
-    
-    var progressText: String {
-        guard !cards.isEmpty else { return "0 з 0" }
-        let displayIndex = min(currentIndex + 1, cards.count)
-        return "\(displayIndex) з \(cards.count)"
-    }
-    
-    var progressValue: Double {
-        guard !cards.isEmpty else { return 0 }
-        return Double(currentIndex) / Double(cards.count)
-    }
-    
-    func markAsLearning() {
-        updateCurrentCardStatus(to: .learning)
-        advanceToNextCard()
-    }
-    
-    func markAsMastered() {
-        updateCurrentCardStatus(to: .mastered)
-        advanceToNextCard()
-    }
-    
-    func restartSession() {
-        currentIndex = 0
-        isSessionCompleted = false
-    }
-    
-    private func updateCurrentCardStatus(to newStatus: LearningStatus) {
-        guard currentIndex < cards.count else { return }
-        cards[currentIndex].updateStatus(to: newStatus)
-    }
-    
-    private func advanceToNextCard() {
-        if currentIndex + 1 < cards.count {
-            currentIndex += 1
-        } else {
-            isSessionCompleted = true
-        }
-    }
-    
-    static var sampleCards: [WordCard] {
-        [
-            WordCard(
-                term: "Itinerary",
-                translation: "Маршрут подорожі",
-                transcription: "/aɪˈtɪn.ə.rer.i/",
-                synonyms: [
-                    "Route — загальний напрямок руху",
-                    "Schedule — розклад поїздки за часом",
-                    "Travel plan — детальний план подорожі"
-                ],
-                status: .new
-            ),
-            WordCard(
-                term: "Departure",
-                translation: "Відправлення, виліт",
-                transcription: "/dɪˈpɑːr.tʃər/",
-                synonyms: [
-                    "Takeoff — момент зльоту літака",
-                    "Leaving — виїзд із місця перебування"
-                ],
-                status: .learning
-            ),
-            WordCard(
-                term: "Accommodation",
-                translation: "Житло, розміщення",
-                transcription: "/əˌkɑː.məˈdeɪ.ʃən/",
-                synonyms: [
-                    "Lodging — тимчасове житло на час поїздки",
-                    "Housing — загальне поняття житла"
-                ],
-                status: .new
-            )
-        ]
-    }
-}
-
+@MainActor
 struct FlashcardSessionView: View {
     @StateObject private var viewModel: FlashcardSessionViewModel
     @State private var isCardFlipped: Bool = false
+    let onSessionChange: () -> Void
     
-    init(viewModel: FlashcardSessionViewModel = FlashcardSessionViewModel()) {
+    init(viewModel: FlashcardSessionViewModel,
+         onSessionChange: @escaping () -> Void = {}) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        self.onSessionChange = onSessionChange
     }
     
     var body: some View {
@@ -153,6 +67,7 @@ struct FlashcardSessionView: View {
             Button {
                 handleCardAction {
                     viewModel.markAsLearning()
+                    onSessionChange()
                 }
             } label: {
                 HStack(spacing: 6) {
@@ -172,6 +87,7 @@ struct FlashcardSessionView: View {
             Button {
                 handleCardAction {
                     viewModel.markAsMastered()
+                    onSessionChange()
                 }
             } label: {
                 HStack(spacing: 6) {
@@ -237,8 +153,15 @@ struct FlashcardSessionView: View {
 
 struct FlashcardSessionView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            FlashcardSessionView()
+        let repository = MockDictionaryRepository()
+        return NavigationView {
+            FlashcardSessionView(
+                viewModel: FlashcardSessionViewModel(
+                    moduleId: repository.fetchModules().first?.id ?? UUID(),
+                    repository: repository,
+                    strategy: SequentialStrategy()
+                )
+            )
         }
     }
 }

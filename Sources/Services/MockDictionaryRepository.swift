@@ -34,7 +34,7 @@ final class MockDictionaryRepository: DictionaryRepositoryProtocol {
         module.updateCardStatus(id: cardId, to: newStatus)
     }
 
-    /// Поки один демонстраційний набір.
+    /// Демонстраційні набори A2, B1 та C1 для практичної №3.
     private static func makeInitialModules() -> [WordModule] {
         let cards: [WordCard] = [
             WordCard(term: "Journey", translation: "Подорож", transcription: "/ˈdʒɜːrni/", synonyms: ["trip", "travel"]),
@@ -48,6 +48,6 @@ final class MockDictionaryRepository: DictionaryRepositoryProtocol {
             WordCard(term: "Map", translation: "Мапа", transcription: "/mæp/"),
             WordCard(term: "Departure", translation: "Відправлення", synonyms: ["leaving"])
         ]
-        return [WordModule(title: "Подорожі", level: .a2, cards: cards)]
+        return [WordModule(title: "Подорожі", level: .a2, cards: cards)] + AdditionalDemoModules.makeModules()
     }
 }
