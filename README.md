@@ -1,35 +1,72 @@
 # Wordios
 
-Wordios — навчальний iOS-застосунок для вивчення англійської лексики за допомогою тематичних карток. Цільова аудиторія — люди, які вивчають англійську на рівнях A1–C2.
+**Wordios** — навчальний iOS-застосунок для вивчення англійських слів за тематичними картками (A1–C2). Створено на Swift та SwiftUI з використанням MVVM і патернів проєктування.
 
-## Практична робота №1: основи Swift, проєкт та Git
+## Практична №1 — Моделі Swift
 
-- `Models.swift` (Крістіна): `EnglishLevel` і `LearningStatus` (`enum`), `WordCard` (`struct` із `Optional`-транскрипцією, синонімами та методом `updateStatus(to:)`), протокол `DeckManageable`.
-- `WordModule.swift` (Діана): `class WordModule`, що реалізує `DeckManageable`; зберігає тему (`title`), рівень (`level`) та колекцію карток (`cards`). Містить `addCard(_:)`, `filterCards(by:)`, `calculateProgress()`, `findCard(term:)`, `updateCardStatus(id:to:)` та `displayTranscription(for:)`.
-- `DemoData.swift` (Діана): приклад модуля «Подорожі» з чотирма словами, зміною статусу, фільтрацією та виведенням результатів у консоль.
+- `WordCard` із перекладом, необов'язковою транскрипцією, синонімами і статусом.
+- `WordModule` з додаванням, пошуком і фільтрацією слів та розрахунком прогресу.
+- `DemoData` містить демонстрацію модуля «Подорожі» (A2, 10 слів).
 
-## Використані конструкції Swift
+## Практична №2 — MVVM та патерни
 
-| Конструкція         | Де знайти                                                             |
-| ------------------- | --------------------------------------------------------------------- |
-| `enum`              | `Models.swift`: `EnglishLevel`, `LearningStatus`                      |
-| `struct`            | `Models.swift`: `WordCard`                                            |
-| `class`             | `WordModule.swift`: `WordModule`                                      |
-| `protocol`          | `Models.swift`: `DeckManageable`                                      |
-| `Optional`          | `Models.swift`: `transcription: String?`                              |
-| `if let`            | `WordModule.swift`: `displayTranscription(for:)`                      |
-| `guard`             | `WordModule.swift`: `calculateProgress()`, `updateCardStatus(id:to:)` |
-| Масив та фільтрація | `WordModule.swift`: `cards`, `filterCards(by:)`                       |
+- `DictionaryRepositoryProtocol` і `MockDictionaryRepository` забезпечують офлайн-сховище.
+- `ModulesListViewModel` керує списком тем та фільтром за рівнями.
+- `FlashcardSessionViewModel` керує сесією і зберігає статус картки через репозиторій.
+- Реалізовані **Builder**, **Strategy** та **Adapter** (`DictionaryWordAdapter`).
+- Діаграма та аналіз SOLID — у [`docs/architecture.md`](docs/architecture.md).
 
-## Як запустити
+## Практична №3 — SwiftUI, навігація та робота з формами
 
-1. Відкрити проєкт Wordios у Xcode.
-2. Додати `Models.swift`, `WordModule.swift` та `DemoData.swift` до цільового застосунку (target), якщо вони ще не включені.
-3. У вже наявному `WordiosApp.swift` викликати `DemoData.runPracticalOneDemo()` в `init()` під `#if DEBUG` (не створювати другий `@main`).
-4. Обрати сумісний iOS Simulator, натиснути **Run**, перевірити консоль Xcode.
+Нові компоненти:
 
-Очікуваний результат: 4 слова у модулі, 1 вивчене слово, прогрес `25.0%`, безпечне виведення відсутньої транскрипції.
+- `Sources/Navigation/AppRouter.swift`: центральна навігація через `NavigationView` (сумісна з iOS 15.5 / Xcode 13.4.1).
+- `Sources/Views/ModulesListView.swift`: список тем, фільтрація A1–C2, прогрес кожного модуля.
+- `Sources/Views/ModuleDetailView.swift`: список слів, транскрипції, синоніми, їх порівняння та запуск тренування.
+- `Sources/Views/AddWordSheetView.swift`: додавання слова через `.sheet`, перевірка обов'язкових полів, захист від дублікатів і можливість збереження при відкритій клавіатурі.
+- `Sources/Views/FlashcardSessionView.swift` і `FlashcardCardView.swift`: інтерфейс тренування; використовують спільну ViewModel з практичної №2 замість дублювання класів.
+- `Sources/Models/AdditionalDemoModules.swift`: набори **«Робота й кар'єра» (B1)** та **«Наука й технології» (C1)** по 10 слів кожен. Набір A2 також має 10 слів.
 
-## Git
+### Карта навігації
 
-Робота ведеться в окремих `feat/...` гілках із Pull Request у `main`. Тег `practical-1` ставиться після злиття і перевірки **обох** частин практичної роботи №1.
+```mermaid
+flowchart TD
+    A[AppRouter] --> B[ModulesListView]
+    B -->|Обрати модуль| C[ModuleDetailView]
+    C -->|Додати слово| D[AddWordSheetView]
+    D -->|Зберегти| C
+    C -->|Почати тренування| E[FlashcardSessionView]
+    E -->|Повернутися| C
+    C -->|Назад| B
+```
+
+**AppRouter** визначає переходи, а екрани надсилають події через замикання. Дані живуть у спільному `MockDictionaryRepository`; після додавання слова та позначення картки прогрес і список оновлюються через ViewModel.
+
+### Сценарій користувача
+
+1. Відкрити Wordios і переглянути тематичні модулі.
+2. Вибрати рівень `A2`, `B1` або `C1` (також доступні інші рівні з порожнім станом).
+3. Відкрити модуль і переглянути список карток із транскрипцією та синонімами.
+4. За потреби порівняти синоніми двох слів.
+5. Натиснути `+`, заповнити форму й зберегти слово. Нове слово одразу з'явиться у списку.
+6. Обрати «Почати тренування», перевертати картки, позначати їх «Ще вчу» або «Вивчено».
+7. Повернутися до модуля: відсоток вивчених слів оновиться.
+
+### Запуск і перевірка
+
+1. Відкрити `Wordios.xcodeproj` у Xcode 13.4.1 або новішому.
+2. Перевірити target membership усіх файлів `Sources/`, `Wordios/` і `WordiosTests/`.
+3. Обрати iOS Simulator, виконати **Product → Build** (`⌘B`), а потім **Product → Test** (`⌘U`).
+4. Перевірити ручний сценарій із [`docs/practical3-checklist.md`](docs/practical3-checklist.md).
+
+Поточне сховище — **in-memory**, тому додані слова та змінені статуси скидаються після перезапуску застосунку. Постійне зберігання й реальне API заплановані на практичну №4.
+
+### Скриншоти екранів
+
+Після запуску в iOS Simulator додайте скриншоти в `docs/screenshots/`:
+`modules-list.png`, `module-detail.png`, `add-word.png`, `training.png`.
+Зображення ще не додані, оскільки потрібні фактичні скриншоти протестованої збірки.
+
+## Робота з Git
+
+Розробка ведеться в гілках `feat/...` із Pull Request у `main`. Тег `practical-3` слід створити **після** злиття і перевірки обох частин практичної №3 у `main`, а не в окремій робочій гілці.
