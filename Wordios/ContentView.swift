@@ -1,17 +1,9 @@
-//
-//  ContentView.swift
-//  Wordios
-//
-//  Created by Костенко Крістіна on 20.11.2026.
-//
-
 import SwiftUI
 
+/// Точка входу до інтерфейсу. Навігація й залежності зібрані в AppRouter.
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            FlashcardSessionView()
-        }
+        AppRouter()
     }
 }
 

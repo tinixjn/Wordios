@@ -22,6 +22,17 @@
 		C1958B9130B0D32F00C2B826 /* WordiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9030B0D32F00C2B826 /* WordiosTests.swift */; };
 		C1958B9B30B0D32F00C2B826 /* WordiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */; };
 		C1958B9D30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */; };
+		FC2490AD9ECEF39D9F56D6FE /* DictionaryWordAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57054CF5F7A3280EFD631506 /* DictionaryWordAdapter.swift */; };
+		4F1CD40FA95BDAC21EBC18DA /* MockDictionaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762A37E33D8DF3E21FC44FAA /* MockDictionaryRepository.swift */; };
+		48AF9308EBDBF8013F1A8747 /* ModulesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110C90D6AE50CC69B0232D6 /* ModulesListViewModel.swift */; };
+		2DC0D98DC409F022A75F4784 /* FlashcardSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262086C541A038CBCD41DFE1 /* FlashcardSessionViewModel.swift */; };
+		6BD425BCC1D62F08DCECD13B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E624FAD79FBCA14B20CC1A /* AppRouter.swift */; };
+		C38F366410EDF3A275141F2B /* AdditionalDemoModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416423CF0613A5F96F7926B8 /* AdditionalDemoModules.swift */; };
+		EA83FB30095B89326DDA65C2 /* ModulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E590FEF100BECE4CE62123 /* ModulesListView.swift */; };
+		BF277BA886DF096D98A5EE06 /* ModuleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D904C9396129FCBA98B3DC3 /* ModuleDetailView.swift */; };
+		BF4C58313F6BE4D55FFDDABF /* AddWordSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF93A402363091F3403242 /* AddWordSheetView.swift */; };
+		6366EC1AF9134AAAE53AB740 /* Practical2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF0311FDD1DDBD7158C60B /* Practical2Tests.swift */; };
+		2477A8DB9F3956859902C8BD /* Practical3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C4DCD9DA456EE3B1BE492B /* Practical3Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +71,17 @@
 		C1958B9630B0D32F00C2B826 /* WordiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1958B9A30B0D32F00C2B826 /* WordiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosUITests.swift; sourceTree = "<group>"; };
 		C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordiosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57054CF5F7A3280EFD631506 /* DictionaryWordAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWordAdapter.swift; sourceTree = "<group>"; };
+		762A37E33D8DF3E21FC44FAA /* MockDictionaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDictionaryRepository.swift; sourceTree = "<group>"; };
+		F110C90D6AE50CC69B0232D6 /* ModulesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesListViewModel.swift; sourceTree = "<group>"; };
+		262086C541A038CBCD41DFE1 /* FlashcardSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardSessionViewModel.swift; sourceTree = "<group>"; };
+		61E624FAD79FBCA14B20CC1A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		416423CF0613A5F96F7926B8 /* AdditionalDemoModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDemoModules.swift; sourceTree = "<group>"; };
+		33E590FEF100BECE4CE62123 /* ModulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesListView.swift; sourceTree = "<group>"; };
+		5D904C9396129FCBA98B3DC3 /* ModuleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailView.swift; sourceTree = "<group>"; };
+		B7DF93A402363091F3403242 /* AddWordSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordSheetView.swift; sourceTree = "<group>"; };
+		A4AF0311FDD1DDBD7158C60B /* Practical2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practical2Tests.swift; sourceTree = "<group>"; };
+		F7C4DCD9DA456EE3B1BE492B /* Practical3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practical3Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +112,8 @@
 		C136466F30B0F98F000BD587 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				16D48931148AD727E19573B2 /* Navigation */,
+				FE0902781EA80340892F9DCD /* ViewModels */,
 				C136467030B0F98F000BD587 /* Patterns */,
 				C136467330B0F98F000BD587 /* Models */,
 				C136467730B0F98F000BD587 /* Views */,
@@ -101,6 +125,7 @@
 		C136467030B0F98F000BD587 /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				57054CF5F7A3280EFD631506 /* DictionaryWordAdapter.swift */,
 				C136467130B0F98F000BD587 /* StudyOrderStrategy.swift */,
 				C136467230B0F98F000BD587 /* ModuleBuilder.swift */,
 			);
@@ -111,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				C136467430B0F98F000BD587 /* DemoData.swift */,
+				416423CF0613A5F96F7926B8 /* AdditionalDemoModules.swift */,
 				C136467530B0F98F000BD587 /* Models.swift */,
 				C136467630B0F98F000BD587 /* WordModule.swift */,
 			);
@@ -121,6 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				C136467830B0F98F000BD587 /* FlashcardCardView.swift */,
+				33E590FEF100BECE4CE62123 /* ModulesListView.swift */,
+				5D904C9396129FCBA98B3DC3 /* ModuleDetailView.swift */,
+				B7DF93A402363091F3403242 /* AddWordSheetView.swift */,
 				C136467930B0F98F000BD587 /* FlashcardSessionView.swift */,
 			);
 			path = Views;
@@ -130,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				C136467B30B0F98F000BD587 /* DictionaryRepositoryProtocol.swift */,
+				762A37E33D8DF3E21FC44FAA /* MockDictionaryRepository.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				C1958B9030B0D32F00C2B826 /* WordiosTests.swift */,
+				A4AF0311FDD1DDBD7158C60B /* Practical2Tests.swift */,
+				F7C4DCD9DA456EE3B1BE492B /* Practical3Tests.swift */,
 			);
 			path = WordiosTests;
 			sourceTree = "<group>";
@@ -189,6 +221,23 @@
 				C1958B9C30B0D32F00C2B826 /* WordiosUITestsLaunchTests.swift */,
 			);
 			path = WordiosUITests;
+			sourceTree = "<group>";
+		};
+		16D48931148AD727E19573B2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				61E624FAD79FBCA14B20CC1A /* AppRouter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FE0902781EA80340892F9DCD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F110C90D6AE50CC69B0232D6 /* ModulesListViewModel.swift */,
+				262086C541A038CBCD41DFE1 /* FlashcardSessionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2490AD9ECEF39D9F56D6FE /* DictionaryWordAdapter.swift in Sources */,
+				4F1CD40FA95BDAC21EBC18DA /* MockDictionaryRepository.swift in Sources */,
+				48AF9308EBDBF8013F1A8747 /* ModulesListViewModel.swift in Sources */,
+				2DC0D98DC409F022A75F4784 /* FlashcardSessionViewModel.swift in Sources */,
+				6BD425BCC1D62F08DCECD13B /* AppRouter.swift in Sources */,
+				C38F366410EDF3A275141F2B /* AdditionalDemoModules.swift in Sources */,
+				EA83FB30095B89326DDA65C2 /* ModulesListView.swift in Sources */,
+				BF277BA886DF096D98A5EE06 /* ModuleDetailView.swift in Sources */,
+				BF4C58313F6BE4D55FFDDABF /* AddWordSheetView.swift in Sources */,
 				C136467C30B0F98F000BD587 /* StudyOrderStrategy.swift in Sources */,
 				C1958B8230B0D32900C2B826 /* ContentView.swift in Sources */,
 				C1958B8030B0D32900C2B826 /* WordiosApp.swift in Sources */,
@@ -338,6 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6366EC1AF9134AAAE53AB740 /* Practical2Tests.swift in Sources */,
+				2477A8DB9F3956859902C8BD /* Practical3Tests.swift in Sources */,
 				C1958B9130B0D32F00C2B826 /* WordiosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
