@@ -46,6 +46,23 @@ struct DictionaryWordAdapter {
         return normalized.joined(separator: ", ")
     }
 
+
+    /// Перетин наборів: порівняння ЦІЛИХ синонімів, а не фрагментів рядка.
+    /// Наприклад ["trip", "travel"] і ["journey", "travel"] -> ["travel"].
+    func commonSynonyms(_ lhs: [String], _ rhs: [String]) -> [String] {
+        func key(_ value: String) -> String {
+            value.trimmingCharacters(in: .whitespacesAndNewlines)
+                .folding(options: [.caseInsensitive, .diacriticInsensitive], locale: nil)
+        }
+        let rightKeys = Set(parseSynonyms(rhs.joined(separator: ", ")).map(key))
+        return parseSynonyms(lhs.joined(separator: ", "))
+            .filter { rightKeys.contains(key($0)) }
+    }
+
+    func synonymsOverlap(_ lhs: [String], _ rhs: [String]) -> Bool {
+        !commonSynonyms(lhs, rhs).isEmpty
+    }
+
     func synonymsMatch(_ lhs: [String], _ rhs: [String]) -> Bool {
         formatSynonymsForComparison(lhs) == formatSynonymsForComparison(rhs)
     }

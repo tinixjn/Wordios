@@ -38,6 +38,7 @@ final class MockDictionaryRepository: DictionaryRepositoryProtocol {
     private static func makeInitialModules() -> [WordModule] {
         let cards: [WordCard] = [
             WordCard(term: "Journey", translation: "Подорож", transcription: "/ˈdʒɜːrni/", synonyms: ["trip", "travel"]),
+            WordCard(term: "Trip", translation: "Поїздка", transcription: "/trɪp/", synonyms: ["journey", "travel", "excursion"]),
             WordCard(term: "Ticket", translation: "Квиток", transcription: "/ˈtɪkɪt/", synonyms: ["pass"]),
             WordCard(term: "Luggage", translation: "Багаж", transcription: "/ˈlʌɡɪdʒ/", synonyms: ["baggage"]),
             WordCard(term: "Destination", translation: "Місце призначення"),

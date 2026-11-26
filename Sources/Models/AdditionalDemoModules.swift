@@ -11,6 +11,7 @@ enum AdditionalDemoModules {
                 WordCard(term: "Interview", translation: "Співбесіда", transcription: "/ˈɪntəvjuː/", synonyms: ["meeting", "conversation"], status: .mastered),
                 WordCard(term: "Deadline", translation: "Кінцевий термін", synonyms: ["due date", "time limit"]),
                 WordCard(term: "Colleague", translation: "Колега", synonyms: ["coworker", "teammate"]),
+                WordCard(term: "Coworker", translation: "Колега по роботі", synonyms: ["colleague", "teammate", "associate"]),
                 WordCard(term: "Salary", translation: "Заробітна плата", synonyms: ["pay", "wage"]),
                 WordCard(term: "Promotion", translation: "Підвищення", synonyms: ["advancement"]),
                 WordCard(term: "Responsibility", translation: "Відповідальність", synonyms: ["duty", "obligation"]),
