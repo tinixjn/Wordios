@@ -153,18 +153,29 @@ struct ModuleDetailView: View {
     }
 
     private func comparisonResult(_ first: WordCard, _ second: WordCard) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let adapter = DictionaryWordAdapter()
+        let common = adapter.commonSynonyms(first.synonyms, second.synonyms)
+
+        return VStack(alignment: .leading, spacing: 8) {
             Text("\(first.term) ↔ \(second.term)")
                 .font(.subheadline.weight(.semibold))
 
             if first.synonyms.isEmpty || second.synonyms.isEmpty {
                 Text("Для одного зі слів не вказані синоніми.")
                     .foregroundColor(.secondary)
-            } else if DictionaryWordAdapter().synonymsMatch(first.synonyms, second.synonyms) {
-                Label("Набори синонімів збігаються", systemImage: "checkmark.circle.fill")
+            } else if adapter.synonymsMatch(first.synonyms, second.synonyms) {
+                Label("Набори синонімів повністю збігаються", systemImage: "checkmark.circle.fill")
                     .foregroundColor(.green)
+            } else if !common.isEmpty {
+                VStack(alignment: .leading, spacing: 4) {
+                    Label("Є частковий збіг синонімів", systemImage: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                    Text("Спільні: \(common.joined(separator: ", "))")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
             } else {
-                Label("Набори синонімів відрізняються", systemImage: "info.circle")
+                Label("Спільних синонімів не знайдено", systemImage: "info.circle")
                     .foregroundColor(.orange)
             }
         }

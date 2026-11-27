@@ -12,7 +12,7 @@ struct AppRouter: View {
     @State private var isTrainingPresented = false
     @State private var addWordModule: WordModule? = nil
 
-    init(repository: any DictionaryRepositoryProtocol = MockDictionaryRepository()) {
+    init(repository: any DictionaryRepositoryProtocol = JSONDictionaryRepository()) {
         self.repository = repository
         _modulesViewModel = StateObject(
             wrappedValue: ModulesListViewModel(repository: repository)
